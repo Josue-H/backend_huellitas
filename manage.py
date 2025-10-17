@@ -17,10 +17,12 @@ def main():
             "forget to activate a virtual environment?"
         ) from exc
     
-    # Asegurarse de que si se está ejecutando runserver, el puerto se pase correctamente
+    # Asegúrate de que solo modifiques 'runserver' cuando sea necesario
     if 'runserver' in sys.argv:
-        # Se añade 0.0.0.0:8000 o el puerto asignado por Render si está disponible
-        sys.argv.append(f"0.0.0.0:{os.getenv('PORT', 8000)}")  # Usa el puerto proporcionado por Render, o 8000 por defecto
+        # Obtén el puerto desde la variable PORT asignada por Render o 8000 como valor predeterminado
+        port = os.getenv('PORT', 8000)
+        # Modifica sys.argv para pasar el puerto correctamente
+        sys.argv.append(f"0.0.0.0:{port}")  # Ahora se pasa correctamente como argumento al comando
     execute_from_command_line(sys.argv)
 
 
