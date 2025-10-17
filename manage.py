@@ -17,10 +17,10 @@ def main():
             "forget to activate a virtual environment?"
         ) from exc
     
-    # Modifica esta línea para escuchar en un puerto fijo, por ejemplo el 8000.
+    # Asegurarse de que si se está ejecutando runserver, el puerto se pase correctamente
     if 'runserver' in sys.argv:
-        # Fija el puerto a 8000, o cualquier puerto que desees
-        sys.argv.append('0.0.0.0:8000')  # Escuchar en todas las interfaces en el puerto 8000
+        # Se añade 0.0.0.0:8000 o el puerto asignado por Render si está disponible
+        sys.argv.append(f"0.0.0.0:{os.getenv('PORT', 8000)}")  # Usa el puerto proporcionado por Render, o 8000 por defecto
     execute_from_command_line(sys.argv)
 
 
