@@ -17,10 +17,10 @@ DATABASES = {
         'USER': os.getenv('DB_USER', 'avnadmin'),  # Cargar desde la variable DB_USER
         'PASSWORD': os.getenv('DB_PASSWORD', ''),  # Cargar desde la variable DB_PASSWORD
         'HOST': os.getenv('DB_HOST', 'mysql-187c0b93-proyectohuellitasbd-cc9c.b.aivencloud.com'),  # Cargar desde DB_HOST
-        'PORT': os.getenv('DB_PORT', '13890'),  # Cargar desde DB_PORT
+        'PORT': os.getenv('DB_PORT', '13886'),  # Cargar desde DB_PORT
         'OPTIONS': {
-            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
-            'charset': 'utf8mb4',
+            'ssl': {'ca': '/path/to/ca.pem'},  # Si estás usando SSL
+            'use_pure': True  # Asegurarse de que esté usando el conector de MySQLX
         },
     }
 }
