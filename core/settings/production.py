@@ -14,11 +14,11 @@ ALLOWED_HOSTS = ['tu-dominio.com', 'www.tu-dominio.com']
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': os.environ.get('DB_NAME', 'huellitas_prod'),
-        'USER': os.environ.get('DB_USER', 'huellitas_user'),
-        'PASSWORD': os.environ.get('DB_PASSWORD', ''),
-        'HOST': os.environ.get('DB_HOST', 'localhost'),
-        'PORT': os.environ.get('DB_PORT', '3306'),
+        'NAME': os.getenv('DB_NAME', 'defaultdb'),  # Cargar desde la variable DB_NAME
+        'USER': os.getenv('DB_USER', 'avnadmin'),  # Cargar desde la variable DB_USER
+        'PASSWORD': os.getenv('DB_PASSWORD', ''),  # Cargar desde la variable DB_PASSWORD
+        'HOST': os.getenv('DB_HOST', 'mysql-187c0b93-proyectohuellitasbd-cc9c.b.aivencloud.com'),  # Cargar desde DB_HOST
+        'PORT': os.getenv('DB_PORT', '13890'),  # Cargar desde DB_PORT
         'OPTIONS': {
             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
             'charset': 'utf8mb4',
