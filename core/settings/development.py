@@ -13,7 +13,8 @@ ALLOWED_HOSTS = [
     'localhost',  # Si estás trabajando localmente
     '127.0.0.1',  # Para permitir conexiones locales
     'backend-huellitas-2ft0.onrender.com',  # Agrega tu dominio de Render
-    'yourdomain.com',  # Si tienes un dominio personalizado
+    'yourdomain.com', 
+     'https://proyectohuellitas1.netlify.app/' # Si tienes un dominio personalizado
 ]
 
 # Base de datos MySQL para desarrollo
