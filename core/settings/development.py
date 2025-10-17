@@ -52,3 +52,4 @@ try:
     INSTALLED_APPS += ['django_extensions']
 except ImportError:
     pass
+
