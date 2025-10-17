@@ -2,6 +2,8 @@
 Configuración de desarrollo para Huellitas
 """
 from .base import *
+from dotenv import load_dotenv
+load_dotenv()  
 
 # Debug activado en desarrollo
 DEBUG = False
