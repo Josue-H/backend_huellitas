@@ -4,7 +4,7 @@ Configuración de desarrollo para Huellitas
 from .base import *
 
 # Debug activado en desarrollo
-DEBUG = True
+DEBUG = False
 
 # Hosts permitidos en desarrollo
 ALLOWED_HOSTS = [
