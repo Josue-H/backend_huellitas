@@ -7,8 +7,12 @@ from .base import *
 # Debug desactivado en producción
 DEBUG = False
 
-# Hosts permitidos en producción (configurar según tu dominio)
-ALLOWED_HOSTS = ['tu-dominio.com', 'www.tu-dominio.com']
+ALLOWED_HOSTS = [
+    'localhost',  # Si estás trabajando localmente
+    '127.0.0.1',  # Para permitir conexiones locales
+    'backend-huellitas-2ft0.onrender.com',  # Agrega tu dominio de Render
+    'yourdomain.com',  
+]
 
 # Base de datos para producción
 DATABASES = {

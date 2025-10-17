@@ -7,7 +7,12 @@ from .base import *
 DEBUG = True
 
 # Hosts permitidos en desarrollo
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '0.0.0.0', '192.168.1.*']
+ALLOWED_HOSTS = [
+    'localhost',  # Si estás trabajando localmente
+    '127.0.0.1',  # Para permitir conexiones locales
+    'backend-huellitas-2ft0.onrender.com',  # Agrega tu dominio de Render
+    'yourdomain.com',  # Si tienes un dominio personalizado
+]
 
 # Base de datos MySQL para desarrollo
 DATABASES = {
